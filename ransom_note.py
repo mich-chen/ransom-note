@@ -1,6 +1,13 @@
 def checkMagazine(magazine, note):
     """Return boolean if magazine has all whole words for ransom note."""
 
+    
+
+"""
+Alternative Solution:
+
+def checkMagazine(magazine, note):
+
     magazine_set = set(magazine.split())
 
     ransom_words = note.split()
@@ -9,6 +16,7 @@ def checkMagazine(magazine, note):
             return False
   
     return True
+"""
 
 
 if __name__ == '__main__':
