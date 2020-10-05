@@ -1,7 +1,10 @@
 def checkMagazine(magazine, note):
     """Return boolean if magazine has all whole words for ransom note."""
 
-    
+    from collections import Counter
+
+    # use Counter method
+    return ((Counter(note) - Counter(magazine)) == {})
 
 """
 Alternative Solution:
