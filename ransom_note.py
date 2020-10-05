@@ -28,3 +28,7 @@ if __name__ == '__main__':
     m2 = "ive Got a Lovely Bunch of Coconuts"
     n2 = "ive got some coconuts"
     print(checkMagazine(m2, n2))  # False
+
+    m3 = "there are two pigeons and doves here now"
+    n3 = "two pigeons and two doves now"
+    print(checkMagazine(m3, n3))  # False
