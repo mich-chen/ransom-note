@@ -4,6 +4,7 @@ def checkMagazine(magazine, note):
     
 
 
+
 """
 Alternative Solution: Counter
 
@@ -12,7 +13,7 @@ def checkMagazine(magazine, note):
     from collections import Counter
 
     # use Counter method
-    return ((Counter(note) - Counter(magazine)) == {})
+    return ((Counter(note.split()) - Counter(magazine).split()) == {})
 
 """
 
