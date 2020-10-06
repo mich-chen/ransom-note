@@ -1,7 +1,27 @@
 def checkMagazine(magazine, note):
     """Return boolean if magazine has all whole words for ransom note."""
 
-    
+    words = {}
+
+    for word in magazine.split():
+        words.setdefault(word, 0)
+        words[word] += 1
+
+    # decrement any ransom words that are in magazine words
+    for word in note.split():
+        if word in words:
+            words[word] -= 1
+        # if ransom word is not in magazine words, then return False
+        else:
+            return False
+
+    # if any leftover magazine words are negative, meaning ransom words had more
+    # then return False because magazine didn't have enough
+    for value in words.values():
+        if value < 0:
+            return False
+
+    return True
 
 
 
